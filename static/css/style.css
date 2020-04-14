@@ -1,0 +1,139 @@
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem); }
+  80% {
+    /* to make the transition move a position to the ryt before it settles down */
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    /* we want it to look as it does ryt now */
+    transform: translateY(0); } }
+
+/* general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #777;
+  box-sizing: border-box;
+  padding: 3rem; }
+
+html {
+  font-size: 62.5%; }
+
+.heading-primary {
+  color: #eee;
+  /* to increase margin to the bottom  */
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  /* to remove the shake upwards in animation */
+  backface-visibility: hidden; }
+
+/* styling the text */
+.heading-primary--main {
+  display: block;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: .8rem; }
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 0.1rem solid #eee;
+  display: inline-block;
+  background-image: linear-gradient(#eee, #eee);
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: translate(-10%, 0); }
+
+.btn {
+  transform: translate(0, 0); }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 8rem;
+    /* all properties are enabled to be translated to .2 seconds */
+    transition: all .2s;
+    /* position relative to ::after */
+    position: relative; }
+    .btn:link:hover, .btn:visited:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 2rem rgba(0, 0, 0, 0.2); }
+    .btn:link:active, .btn:visited:active {
+      transform: translateY(-0.1rem);
+      box-shadow: 0 0.5rem rgba(0, 0, 0, 0.2); }
+  .btn--color {
+    background-color: red;
+    color: #fff; }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; }
+  .btn--color::after {
+    background-color: red; }
+  .btn:hover::after {
+    /* transform scale increases the element */
+    transform: scaleX(1.4) scaleY(1.6);
+    /* to make the element fade out */
+    opacity: 0; }
+  .btn--animated {
+    animation: moveInBottom .5s ease-out;
+    /* animation fill mode. it applies the style of 0% before animation starts */
+    animation-fill-mode: backwards; }
+
+.section-primary {
+  background-image: linear-gradient(to right bottom, rgba(119, 119, 119, 0.8), rgba(119, 119, 119, 0.8)), url(../images/lib.jpg);
+  background-size: cover;
+  height: 70vh;
+  /* placing the position to relative */
+  position: relative; }
+
+/* centering the text */
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transforming the text so as to be in the middle */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* to remove the shake upwards in animation */
+  backface-visibility: hidden; }
+
+/* sizing the logo */
+.header {
+  background-position: top;
+  background-color: #f7f7f7;
+  /* displaying the lists in block */ }
+  .header__logo--box {
+    width: 10%; }
+  .header__logo--navbox {
+    list-style: none;
+    float: right;
+    margin-top: 3rem;
+    /* to display content in block */ }
+    .header__logo--navbox li {
+      display: inline-block; }
+      .header__logo--navbox li:not(:last-child) {
+        margin-right: 1.2rem; }
+      .header__logo--navbox li a {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        color: #000; }

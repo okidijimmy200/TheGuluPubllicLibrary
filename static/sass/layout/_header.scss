@@ -1,0 +1,64 @@
+
+.section-primary  {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(119, 119, 119, .8),
+        rgba(119, 119, 119, .8)),
+        url(../images/lib.jpg);
+    background-size: cover;
+    height:70vh;
+    /* placing the position to relative */
+    position: relative;
+}
+
+/* centering the text */
+.header__text-box {
+    position:absolute;
+    top:50%;
+    left:50%;
+    /* transforming the text so as to be in the middle */
+    transform:translate(-50%, -50%);
+    // aligining the text to the center
+    text-align: center;
+    /* to remove the shake upwards in animation */
+    backface-visibility: hidden;
+    
+    
+}
+
+
+/* sizing the logo */
+
+.header {
+    background-position: top;
+    background-color: $color-grey-light-1;
+
+    
+    &__logo--box {
+        width:10%;
+    }
+    /* displaying the lists in block */
+    &__logo--navbox {
+        list-style: none;
+        float: right;
+        margin-top: 3rem; 
+        
+        /* to display content in block */
+        li {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 1.2rem;
+            }
+
+            a {
+                text-decoration: none;
+                text-transform: capitalize;
+                font-size: 1.6rem;
+                color: $color-black;
+            }        
+    }     
+        
+    }    
+    
+}

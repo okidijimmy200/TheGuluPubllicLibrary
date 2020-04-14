@@ -1,0 +1,33 @@
+
+
+.heading-primary {
+    color:$color-grey-light-2;
+    /* to increase margin to the bottom  */
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    /* to remove the shake upwards in animation */
+    backface-visibility: hidden;
+    
+    
+    
+}
+/* styling the text */
+.heading-primary--main{
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: .8rem;
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;    
+    border-bottom: .1rem solid $color-grey-light-2; 
+    display: inline-block;  
+    background-image: linear-gradient($color-grey-light-2, $color-grey-light-2);
+    -webkit-background-clip: text;
+    color: transparent;
+    transform:translate(-10%, 0);
+
+}
