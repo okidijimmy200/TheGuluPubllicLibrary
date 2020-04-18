@@ -45,13 +45,14 @@ html {
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
+  letter-spacing: 1.8rem;
   font-weight: 600;
   border-bottom: 0.1rem solid #eee;
   display: inline-block;
   background-image: linear-gradient(#eee, #eee);
   -webkit-background-clip: text;
   color: transparent;
-  transform: translate(-10%, 0); }
+  transform: translate(0%, 0); }
 
 .btn {
   transform: translate(0, 0); }
