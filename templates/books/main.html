@@ -1,9 +1,23 @@
-<!-- {% extends 'books/base.html' %}
-{% load static %}
+{% extends 'books/base.html' %}
+{% load static  %}
 
     {% block content %}
-    <main class="bg-image">
-        
+    <!-- header section -->
+    {% include 'books/snippets/header.html' %}
+    <!-- end of header section -->
+    
+    <!-- main section -->
+    <main>
+        <section class="section-features">
+            <div class="u-center-text">
+                <h2 class="heading-secondary">
+                    latest listing
+                </h2>
+            </div>
+            
+            
+        </section>
     </main>
-
-    {% endblock %} -->
+    
+    
+    {% endblock %}

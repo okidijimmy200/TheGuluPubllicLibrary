@@ -5,7 +5,7 @@ from .models import Book
 def home_view(request):
     books = Book.objects.all()
     context = {"books":books}
-    template = "books/header.html"
+    template = "books/main.html"
     return render(request, template, context)
 
 

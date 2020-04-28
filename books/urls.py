@@ -5,5 +5,5 @@ from .views import home_view
 app_name = 'books'
 
 urlpatterns = [    
-    path('', home_view, name='header'),
+    path('', home_view, name='main'),
 ]
