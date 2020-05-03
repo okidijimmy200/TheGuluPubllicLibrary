@@ -3,9 +3,12 @@
 
 @import "sass/base/animation";
 @import "sass/base/base";
+@import "sass/base/utilities";
 @import "sass/base/typography.scss";
 
+
 @import "sass/components/button";
+@import "sass/components/card";
 
 @import "sass/layout/grid";
 @import "sass/layout/header";

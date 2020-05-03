@@ -1,0 +1,29 @@
+.card {
+    height: 47rem;
+   
+
+    &__side {
+        background-color: $color-white;
+        height: 47rem;
+        border-radius: 3px;
+        overflow: hidden;
+        -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        
+        
+    }
+    
+
+    &__picture {
+        background-size: cover;
+        height: 20rem;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+
+        &--1{
+            height: 15rem;
+            width: 15rem;
+        }
+    }   
+ 
+}

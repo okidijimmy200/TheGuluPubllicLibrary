@@ -9,12 +9,36 @@
     <!-- main section -->
     <main>
         <section class="section-features">
-            <div class="u-center-text">
+            <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
-                    latest listing
+                    latest arrivals
                 </h2>
             </div>
-            
+            <!-- card section -->
+            <div class="row">
+                {% for book in books %}
+                <div class="col-1-of-3">
+                    <!-- styling the card -->
+                    <div class="card">
+                        <!-- card picture -->
+                        <div class="card__side">
+                            {% if book.upload  %}
+                            <div class="card__picture">
+                               <img src="{{ book.upload.url }}" class="card__picture--1" />
+                            </div>
+                            {% endif %}
+                            <div class="text">
+                                text
+                            </div>
+                        </div>
+                           
+                    </div>
+                </div>
+                {% cycle "" "" "</div><div class='row'><div class='col-1-of-3'>" %}
+                    {% endfor %}
+                </div>
+                
+            </div>
             
         </section>
     </main>
