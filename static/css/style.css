@@ -27,12 +27,6 @@ body {
 html {
   font-size: 62.5%; }
 
-.u-center-text {
-  text-align: center !important; }
-
-.u-margin-bottom-big {
-  margin-bottom: 5rem  !important; }
-
 .heading-primary {
   color: #eee;
   /* to increase margin to the bottom  */
@@ -65,6 +59,35 @@ html {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .2rem; }
+
+.heading-tetiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 5rem  !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem  !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem  !important; }
+
+.u-margin-top-big {
+  margin-top: 5rem !important; }
+
+.u-margin-top-medium {
+  margin-top: 3rem !important; }
+
+.u-margin-top-small {
+  margin-top: 1rem !important; }
+
+.head-latest {
+  padding-top: 3rem; }
 
 .btn {
   transform: translate(0, 0); }
@@ -111,6 +134,26 @@ html {
     /* animation fill mode. it applies the style of 0% before animation starts */
     animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #333;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid red;
+  padding: 3px;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: red;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.2rem);
+  border-radius: 1rem; }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(0); }
+
 .card {
   height: 47rem; }
   .card__side {
@@ -119,21 +162,72 @@ html {
     border-radius: 3px;
     overflow: hidden;
     -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    position: relative; }
   .card__picture {
     background-size: cover;
-    height: 20rem;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px; }
     .card__picture--1 {
-      height: 15rem;
-      width: 15rem; }
+      width: 23rem;
+      height: 23rem;
+      border: none; }
+  .card__text {
+    padding: 2rem;
+    font-size: 1.5rem;
+    height: 17rem; }
+  .card__btn-view {
+    position: absolute;
+    left: 50%;
+    transform: translate(-60%, -50%); }
+
+.specification-box {
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center; }
+  .specification-box__icon {
+    font-size: 3rem;
+    margin-bottom: 5px; }
+
+.footer {
+  background-color: #333;
+  padding: 4rem 0;
+  font-size: 1.6rem; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 2rem; }
+  .footer__logo {
+    width: 10rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 0.1rem solid #eee;
+    padding-top: 1rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 8.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #f7f7f7;
+    background-color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block; }
+  .footer__link:hover, .footer__link:active {
+    color: #000;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+  .footer__copyright {
+    width: 80%;
+    text-align: center;
+    margin-left: 6rem; }
 
 .row {
   max-width: 75rem;
   margin: 0 auto; }
   .row:not(:last-child) {
-    margin-bottom: 8rem; }
+    margin-bottom: 5rem; }
   .row::after {
     content: "";
     display: table;
@@ -158,7 +252,7 @@ html {
 .section-primary {
   background-image: linear-gradient(to right bottom, rgba(119, 119, 119, 0.8), rgba(119, 119, 119, 0.8)), url(../images/lib.jpg);
   background-size: cover;
-  height: 57vh;
+  height: 55vh;
   /* placing the position to relative */
   position: relative; }
 
@@ -176,8 +270,9 @@ html {
 /* sizing the logo */
 .header {
   background-position: top;
-  background-color: #f7f7f7;
   /* displaying the lists in block */ }
+  .header__logo {
+    background-color: #f7f7f7; }
   .header__logo--box {
     width: 10%; }
   .header__logo--navbox {
@@ -196,6 +291,11 @@ html {
         color: #000; }
 
 .section-features {
-  padding: 4rem 0;
+  height: 76rem;
   background-color: #f7f7f7;
   position: relative; }
+
+.section-specifications {
+  padding: 5rem 0;
+  background-color: #eee;
+  height: 37rem; }

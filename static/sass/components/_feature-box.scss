@@ -1,0 +1,11 @@
+.specification-box {
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+
+    // styling the icon
+    &__icon {
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
+}

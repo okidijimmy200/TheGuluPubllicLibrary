@@ -9,6 +9,7 @@
         overflow: hidden;
         -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        position: relative;
         
         
     }
@@ -16,14 +17,28 @@
 
     &__picture {
         background-size: cover;
-        height: 20rem;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
 
         &--1{
-            height: 15rem;
-            width: 15rem;
+            width: 23rem;
+            height: 23rem;
+            border: none;
         }
-    }   
+    } 
+    
+    // styling the text
+    &__text {
+        padding: 2rem;
+        font-size: 1.5rem;
+        height: 17rem;
+    }
+
+    &__btn-view{
+        position: absolute;
+        left: 50%;
+        transform:translate(-60%, -50%);
+
+    }
  
 }

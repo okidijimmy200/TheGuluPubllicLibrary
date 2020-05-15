@@ -6,7 +6,7 @@
         rgba(119, 119, 119, .8)),
         url(../images/lib.jpg);
     background-size: cover;
-    height:57vh;
+    height:55vh;
     /* placing the position to relative */
     position: relative;
 }
@@ -31,8 +31,11 @@
 
 .header {
     background-position: top;
-    background-color: $color-grey-light-1;
 
+    // styling the logo
+    &__logo {        
+    background-color: $color-grey-light-1;
+    }
     
     &__logo--box {
         width:10%;
