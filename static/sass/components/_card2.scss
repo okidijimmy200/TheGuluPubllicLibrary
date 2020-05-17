@@ -1,10 +1,10 @@
-.card {
-    height: 47rem;
+.card2 {
+    height: 38rem;
    
 
     &__side {
         background-color: $color-white;
-        height: 47rem;
+        height: 38rem;
         border-radius: 3px;
         overflow: hidden;
         -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
@@ -20,14 +20,9 @@
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
 
-        &--1{
-            width: 23rem;
-            height: 23rem;
-            border: none;
-        }
         &--2{
-            width: 18rem;
-            height: 18rem;
+            width: 16rem;
+            height: 16rem;
             border: none;
         }
     } 
@@ -36,12 +31,13 @@
     &__text {
         padding: 2rem;
         font-size: 1.5rem;
-        height: 17rem;
+        height: 16rem;
     }
 
     &__btn-view{
         position: absolute;
         left: 50%;
+        width: 10rem;
         transform:translate(-60%, -50%);
 
     }
