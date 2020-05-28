@@ -55,7 +55,7 @@ html {
   transform: translate(0%, 0); }
 
 .heading-secondary {
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .2rem; }
@@ -64,6 +64,14 @@ html {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
+  .heading-tetiary--1 {
+    text-transform: capitalize;
+    float: right; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
 
 .u-center-text {
   text-align: center !important; }
@@ -210,11 +218,60 @@ html {
     padding: 2rem;
     font-size: 1.5rem;
     height: 16rem; }
-  .card2__btn-view {
+  .card2__btn-view--1 {
+    position: absolute;
+    top: 58rem;
+    transform: translate(111%, -28%); }
+  .card2__btn-view--2 {
     position: absolute;
     left: 50%;
-    width: 10rem;
-    transform: translate(-60%, -50%); }
+    width: 11rem;
+    transform: translate(-54%, -11%); }
+
+.detailCard {
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 1rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  position: relative;
+  height: 50rem; }
+  .detailCard__picture {
+    background-size: cover; }
+    .detailCard__picture--1 {
+      width: 100%;
+      height: 50rem; }
+
+.content {
+  padding: 2rem 5rem;
+  height: 25rem; }
+
+.contacts {
+  position: relative;
+  cursor: pointer; }
+
+a, li {
+  color: #6b6b6b;
+  text-decoration: none; }
+
+.dropdown {
+  position: absolute;
+  cursor: pointer;
+  padding: 5rem;
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #eee;
+  right: -5rem;
+  top: 2.5rem;
+  transition: all 0.25s ease-out;
+  transform: scale(0);
+  box-shadow: 0 2px 3px #ccc; }
+
+.dropdown.active {
+  transform: scale(1);
+  transition: all 0.25s cubic-bezier(0.5, 1.8, 0.9, 0.8);
+  z-index: 2;
+  background-color: #fff; }
 
 .specification-box {
   font-size: 1.5rem;
@@ -223,6 +280,48 @@ html {
   .specification-box__icon {
     font-size: 3rem;
     margin-bottom: 5px; }
+
+.search {
+  padding: 5rem 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 8px;
+    width: 85%;
+    transition: all .2s;
+    margin-right: -3.25rem; }
+    .search__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: #f0eeee; }
+    .search__input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: #ccc; }
+  .search__input:focus + .search__button {
+    background-color: #f0eeee; }
+  .search__button {
+    border: none;
+    background-color: #f4f2f2; }
+    .search__button:focus {
+      outline: none; }
+    .search__button:active {
+      transform: translate(2px); }
+  .search__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: #333; }
+
+.detailImage {
+  flex: 0 0 50%; }
+
+.contentBody {
+  flex: 1; }
 
 ul li.drop {
   position: relative; }
@@ -291,6 +390,17 @@ ul li.drop {
 
 .dropOut ul li:hover {
   background: #f6f6f6; }
+  .dropOut ul li:hover:not(:nth-child(0)) a::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: none;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0; }
 
 ul li:hover .dropdownContain {
   top: 45px; }
@@ -397,12 +507,27 @@ ul li:hover .dropOut {
       display: inline-block; }
       .header__logo--navbox li:not(:last-child) {
         margin-right: 1.2rem; }
+      .header__logo--navbox li:not(:nth-child(2)) a::after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #333;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0; }
+      .header__logo--navbox li:not(:nth-child(2)) a:hover::after {
+        width: 100%;
+        left: 0; }
       .header__logo--navbox li a {
         text-decoration: none;
         text-transform: capitalize;
         font-size: 1.6rem;
         color: #000;
-        padding: 1.5rem; }
+        padding: 1.5rem 2rem;
+        position: relative; }
 
 .section-features {
   height: 76rem;
@@ -413,3 +538,12 @@ ul li:hover .dropOut {
   padding: 5rem 0;
   background-color: #eee;
   height: 37rem; }
+
+.section-detail {
+  padding: 1rem 0;
+  background-color: #fff; }
+
+.container {
+  max-width: 88.7rem;
+  margin: 2rem auto;
+  display: flex; }

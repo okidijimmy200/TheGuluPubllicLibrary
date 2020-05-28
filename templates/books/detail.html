@@ -1,0 +1,50 @@
+{% extends 'books/base.html' %}
+{% load static  %}
+
+{% block content %}
+
+ <!-- navbar -->
+ {% include 'books/snippets/navbar.html' %}
+ <!-- end of navbar -->
+    <section class="section-detail">
+        <div class="container">
+            <div class="detailImage">
+                <div class="detailCard">
+                    {% if book.upload  %}
+                    <div class="detailCard__picture">
+                       <img src="{{ book.upload.url }}" class="detailCard__picture--1" />
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+            <div class="contentBody">
+                <div class="content">
+                    <h1 class="heading-secondary ">{{ book.name }}</h1>
+                     
+                <p class="paragraph">
+                    {{ book.body }}
+                </p>
+
+                <h1 class="heading-tetiary--1">
+                    <strong>...By {{ book.author }}</strong></h1>                   
+                
+                </div>
+                 <!-- placing the button -->
+                 <div class="card2__btn-view--1 u-margin-top-small">
+                    <a href="{% url 'books:all_books' %}" class="btn-text"> &larr; See Listing</a>
+                </div>
+               
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <!-- including the footer section -->
+   {% include 'books/snippets/footer.html' %}
+   <!-- end of footer section -->
+
+   </section>
+
+{% endblock %}

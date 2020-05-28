@@ -1,5 +1,6 @@
 ul li.drop {
 	position: relative;
+	
 }
 
 
@@ -50,7 +51,7 @@ ul li.drop {
 	text-align: left;
 	text-decoration: none;
 	cursor: pointer;
-    font-size: 1.3rem;
+	font-size: 1.3rem;
 	float: left;
 	width: 125px;
 	padding: 12px 0 10px 15px;
@@ -68,8 +69,33 @@ ul li.drop {
 
 .dropOut ul li:hover {
 	background: #f6f6f6;
+	
+	&:not(:nth-child(0)){
+                
+		a {
+			&::after {
+				background: none repeat scroll 0 0 transparent;
+				bottom: 0;
+				content: "";
+				display: block;
+				height: 2px;
+				left: 50%;
+				position: absolute;
+				background: none;
+				transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				width: 0;
+			}
+
+			// &:hover::after {
+			// 	width: 100%; 
+			// 	left: 0;
+			// }
+		}
+	}
 }
 
 ul li:hover .dropdownContain { top: 45px; }
 ul li:hover .underline { border-bottom-color: #777; }
 ul li:hover .dropOut { opacity: 1; margin-top: -8px; }
+
+// how to make an entire section not inherit css from parent

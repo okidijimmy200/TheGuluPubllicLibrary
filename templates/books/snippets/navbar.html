@@ -1,6 +1,9 @@
 <!-- creating the logo box -->
 <div class="header__logo">
-    <img class="header__logo--box" src="../../static/images/logo.png" alt="Logo">
+    <a  href="{% url 'books:main' %}">
+        <img class="header__logo--box" src="../../static/images/logo.png" alt="Logo">
+    </a>
+    
     <div class="header__logo--navbox clearfix">
         <ul>
             <li><a href="">about</a></li>
@@ -17,7 +20,7 @@
                     </div>
                 </div>
             </li>
-            <li><a href="">contacts</a></li>
+            {% include 'books/snippets/contact.html' %}
             <li><a class="button" href="">My Account</a></li>
         </ul>
     </div>

@@ -1,0 +1,28 @@
+<form method="GET" action="{% url 'search:query' %}"  class="search" id="search-form">
+    
+    <input class="search__input" id="search" type="search" name="q" size="50" placeholder="Search book" aria-label="Search" value="{{ request.GET.q }}">
+    
+   
+    <button class="search__button" type="submit">
+     <!-- including the SVG -->
+     <svg class="search__icon">
+      <!-- to use the svg, we use use xlink -->
+      <use xlink:href="../../static/images/sprite.svg#icon-magnifying-glass"></use>
+      
+  </svg>  
+    </button>
+
+
+  </form>
+  
+<!-- <form method="GET" action="{% url 'search:query' %}"  class="form-inline" id="search-form">
+    <div class="input-group">
+    <input class="form-control mr-sm-2" id="search" type="search" name="q" size="50" placeholder="Search book" aria-label="Search" value="{{ request.GET.q }}">
+    <ul class="list-group" id="result"></ul>
+    <span class="input-group-btn">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+</span>
+</div>
+  </form>
+   -->
+

@@ -6,9 +6,10 @@ from django.urls import include, path
 
 
 
-urlpatterns = [
-    path('', include('books.urls')),
+urlpatterns = [    
     path('admin/', admin.site.urls),
+    path('', include('books.urls',  namespace='books')),
+    path('', include('search.urls', namespace='search')),
     
 ]
 

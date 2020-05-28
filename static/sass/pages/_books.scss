@@ -10,3 +10,18 @@
     background-color: $color-grey-light-2;
     height: 37rem;
 }
+
+// designing the detail section
+.section-detail {
+    padding: 1rem 0;
+    background-color: $color-white;
+
+}
+
+// container for detail page
+.container {
+    max-width: 88.7rem;
+    margin: 2rem auto;
+    display: flex;
+    
+}

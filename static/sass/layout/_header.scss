@@ -56,13 +56,38 @@
                 
             }
 
+            &:not(:nth-child(2)){
+                
+                a {
+                    &::after {
+                        background: none repeat scroll 0 0 transparent;
+                        bottom: 0;
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        left: 50%;
+                        position: absolute;
+                        background: $color-gray-dark-3;
+                        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                        width: 0;
+                    }
+    
+                    &:hover::after {
+                        width: 100%; 
+                        left: 0;
+                    }
+                }
+            }
+            
             a {
                 text-decoration: none;
                 text-transform: capitalize;
                 font-size: 1.6rem;
                 color: $color-black;
-                padding: 1.5rem;
-            }        
+                padding: 1.5rem 2rem;
+                position: relative;   
+            }
+                 
     }     
         
     }    
