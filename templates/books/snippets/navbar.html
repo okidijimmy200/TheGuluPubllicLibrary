@@ -3,16 +3,17 @@
     <a  href="{% url 'books:main' %}">
         <img class="header__logo--box" src="../../static/images/logo.png" alt="Logo">
     </a>
-    
-    <div class="header__logo--navbox clearfix">
+    {% include 'books/snippets/navigation.html' %}
+    <div class="header__logo--navbox clearfix">      
+        
         <ul>
             <li><a href="">about</a></li>
             <!-- creating a dropdown -->
-            <li class="drop"><a href="">services</a>
-                <div class="dropdownContain">
-                    <div class="dropOut">
-                        <div class="triangle"></div>
-                        <ul>
+            <li class="drop drop--0"><a href="">services</a>
+                <div class="dropdownContain dropdownContain--0">
+                    <div class="dropOut dropOut--0">
+                        <div class="triangle triangle--0"></div>
+                        <ul class="dropList dropList--1">
                             <li><a href="">Training</a></li>
                             <li><a href="">Stocks & Donations</a></li>
                             <li><a href="">Co-operation</a></li>
@@ -21,7 +22,21 @@
                 </div>
             </li>
             {% include 'books/snippets/contact.html' %}
-            <li><a class="button" href="">My Account</a></li>
+            <li><a class="drop drop--1" href="">My Account</a>
+                <div class="dropdownContain dropdownContain--1">
+                    <div class="dropOut dropOut--1">
+                        <div class="triangle triangle--1"></div>
+                        <ul >
+                            {% if not request.user.is_authenticated %}
+                            <li><a href="{% url 'account_login' %}">Login</a></li>
+                            <li><a href="{% url 'account_signup' %}">SignUp</a></li>
+                            {% else %}
+                            <li><a href="{% url 'account_logout' %}">LogOut</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
 </div>

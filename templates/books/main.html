@@ -29,13 +29,16 @@
                                 </a>                               
                             </div>
                             {% endif %}
-                            <div class="card__text">
-                                <p>{{ book.body|truncatechars:80|linebreaks }}</p>
+                            <div>
+                                <div class="card__text">
+                                    <p>{{ book.body|truncatechars:80|linebreaks }}</p>
+                                </div>
+                                <!-- placing the button -->
+                                <div class="card__btn-view u-margin-top-small">
+                                    <a href="{{ book.get_absolute_url }}" class="btn-text">view book &rarr;</a>
+                                </div>
                             </div>
-                            <!-- placing the button -->
-                            <div class="card__btn-view u-margin-top-small">
-                                <a href="{{ book.get_absolute_url }}" class="btn-text">view book &rarr;</a>
-                            </div>
+                            
 
                         </div>
                            

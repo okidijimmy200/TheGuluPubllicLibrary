@@ -16,6 +16,8 @@ def all_books(request):
     template = "books/allBooks.html"
     return render(request, template, context)
 
+
+   
 def detail_view(request, book):
     book = get_object_or_404(Book, slug=book)
 

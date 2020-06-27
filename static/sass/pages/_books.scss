@@ -1,21 +1,25 @@
 .section-features {
-    height: 76rem;
+    padding: 2rem 0;
     background-color: $color-grey-light-1;
     position: relative;
+
+
+    
 }
 
 // specifications section
 .section-specifications {
     padding: 5rem 0;
     background-color: $color-grey-light-2;
-    height: 37rem;
+
+    
+   
 }
 
 // designing the detail section
 .section-detail {
     padding: 1rem 0;
     background-color: $color-white;
-
 }
 
 // container for detail page

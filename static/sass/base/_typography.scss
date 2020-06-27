@@ -17,6 +17,13 @@
     font-size: 4rem;
     font-weight: 400;
     letter-spacing: .8rem;
+
+    @media only screen and (max-width:$bp-medium) {
+        font-size: 3rem;
+        letter-spacing: .6rem;
+    }
+
+  
 }
 
 .heading-primary--sub {
@@ -30,6 +37,11 @@
     -webkit-background-clip: text;
     color: transparent;
     transform:translate(0%, 0);
+
+    @media only screen and (max-width:$bp-medium) {
+        font-size: 1.5rem;
+        letter-spacing: 1.4rem;
+    }
 
 }
 

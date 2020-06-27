@@ -10,9 +10,19 @@ $color-gray-dark-3:#333;
 
 
 // GRID
-$grid-width:75rem;
+$grid-width:114rem;
+$color-bue: blue;
 $gutter-vertical: 5rem;
 // small gutter
-$gutter-vertical-small: 6rem;
+$gutter-vertical-small: 3rem;
 // space btn the different columns
 $gutter-horizontal: 4rem;
+
+
+//////////////////
+// writing the breakpoints
+$bp-bigDesktop: 60rem;
+$bp-largest: 60rem;
+$bp-large:56.25rem;
+$bp-medium:49.75rem;
+$bp-small:41.876rem
