@@ -23,7 +23,7 @@ body {
   color: #777;
   box-sizing: border-box;
   padding: 3rem; }
-  @media only screen and (max-width: 60rem) {
+  @media only screen and (max-width: 75em) {
     body {
       padding: 0; } }
 
@@ -180,13 +180,13 @@ html {
   transform: translateY(0); }
 
 .card {
-  height: 47rem; }
+  height: 52rem; }
   @media only screen and (max-width: 41.876rem) {
     .card {
       height: 40rem; } }
   .card__side {
     background-color: #fff;
-    height: 47rem;
+    height: 52rem;
     border-radius: 3px;
     overflow: hidden;
     -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -202,7 +202,7 @@ html {
     border-top-left-radius: 3px; }
     .card__picture--1 {
       width: 36rem;
-      height: 28rem;
+      height: 24rem;
       border: none; }
       @media only screen and (max-width: 41.876rem) {
         .card__picture--1 {
@@ -215,7 +215,7 @@ html {
   .card__text {
     padding: 2rem;
     font-size: 1.5rem;
-    height: 11rem; }
+    height: 18rem; }
   .card__btn-view {
     position: absolute;
     left: 50%;
@@ -550,25 +550,22 @@ ul li:hover .dropOut {
     display: inline-block; }
   .footer__link:hover, .footer__link:active {
     color: #000;
+    background-color: #fff;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
   .footer__copyright {
     width: 80%;
     text-align: center;
-    margin-left: 11rem;
+    margin-left: 16rem;
     margin-top: 5rem; }
-
-.row1 {
-  display: flex; }
 
 .row {
   max-width: 114rem;
-  margin-left: 8rem;
-  display: inline-block; }
+  margin: 0 auto; }
   .row:not(:last-child) {
-    margin-bottom: 5rem; }
+    margin-bottom: 8rem; }
   @media only screen and (max-width: 41.876rem) {
     .row {
-      margin-bottom: 3rem; } }
+      margin-bottom: 6rem; } }
   .row::after {
     content: "";
     display: table;
@@ -576,26 +573,26 @@ ul li:hover .dropOut {
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 4rem; }
+      margin-right: 6rem; }
       @media only screen and (max-width: 41.876rem) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0;
-          margin-bottom: 3rem; } }
+          margin-bottom: 6rem; } }
     @media only screen and (max-width: 41.876rem) {
       .row [class^="col-"] {
         width: 100% !important; } }
   .row .col-1-of-2 {
-    width: calc((100% - 4rem) / 2); }
+    width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 4rem) / 3); }
+    width: calc((100% - 2 * 6rem) / 3); }
   .row .col-2-of-3 {
-    width: calc(2* ((100% - 2 * 4rem) / 3 + 4rem)); }
+    width: calc(2* ((100% - 2 * 6rem) / 3 + 6rem)); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 4rem) / 4); }
+    width: calc((100% - 3 * 6rem) / 4); }
   .row .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * 4rem) / 4) + 4rem); }
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
-    width: calc(3 *((100% - 3 * 4rem) / 4) + 2*4rem); }
+    width: calc(3 *((100% - 3 * 6rem) / 4) + 2*6rem); }
 
 .section-primary {
   background-image: linear-gradient(to right bottom, rgba(119, 119, 119, 0.8), rgba(119, 119, 119, 0.8)), url(../images/lib.jpg);

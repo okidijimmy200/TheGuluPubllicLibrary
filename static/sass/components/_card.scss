@@ -1,5 +1,5 @@
 .card {
-    height: 47rem;
+    height: 52rem;
 
     @media only screen and (max-width:$bp-small) {
         height: 40rem;
@@ -9,7 +9,7 @@
 
     &__side {
         background-color: $color-white;
-        height: 47rem;
+        height: 52rem;
         border-radius: 3px;
         overflow: hidden;
         -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
@@ -30,7 +30,7 @@
 
         &--1{
             width: 36rem;
-            height: 28rem;
+            height: 24rem;
             border: none;
 
             @media only screen and (max-width:$bp-small) {
@@ -49,7 +49,7 @@
     &__text {
         padding: 2rem;
         font-size: 1.5rem;
-        height: 11rem;
+        height: 18rem;
     }
 
     &__btn-view{

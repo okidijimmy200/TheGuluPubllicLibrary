@@ -1,9 +1,9 @@
 // definin the grid row
 .row {
     max-width: $grid-width;
-    margin-left: 8rem;
-    // margin: 0 auto;
-    display: inline-block;
+    // margin-left: 8rem;
+    margin: 0 auto;
+    // display: inline-block;
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
     }
