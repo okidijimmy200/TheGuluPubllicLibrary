@@ -43,9 +43,9 @@
     /* displaying the lists in block */
     
     &__logo--navbox {
-        @media only screen and (min-width:$bp-small) {
+        // @media only screen and (min-width:$bp-small) {
           
-        }
+        // }
         list-style: none;
         float: right;
         margin-top: 3rem;

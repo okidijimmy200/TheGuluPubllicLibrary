@@ -13,15 +13,32 @@ $color-gray-dark-3:#333;
 $grid-width:114rem;
 $gutter-vertical: 8rem;
 // small gutter
-$gutter-vertical-small: 6rem;
+$gutter-vertical-small: 4rem;
 // space btn the different columns
-$gutter-horizontal: 6rem;
+$gutter-horizontal: 5rem;
 
 
 //////////////////
 // writing the breakpoints
-$bp-bigDesktop: 60rem;
-$bp-largest: 75em;
-$bp-large:56.25rem;
-$bp-medium:49.75rem;
-$bp-small:41.876rem
+// $bp-bigDesktop: 60rem;
+// $bp-largest: 75em;
+// $bp-large:56.25rem;
+// $bp-medium:49.75rem;
+// $bp-small:41.876rem;
+
+
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+
+// $bp-bigDesktop: 60rem;
+// $bp-small:37.5rem;
+// $bp-medium:56.25rem;
+// $bp-large:62.5rem;
+// $bp-largest: 112.5em;
+
+
+
+

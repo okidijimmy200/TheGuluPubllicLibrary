@@ -6,7 +6,8 @@
 }
 
 
-@media only screen and (max-width:$bp-small) {
+@media only screen and (max-width:$bp-small)
+ {
     
 .navigation {
     height: 0;
@@ -23,7 +24,7 @@
         position: fixed;
         border-radius: 50%;
         top: 1.5rem;
-        left: 67rem;
+        left: 61rem;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
@@ -36,7 +37,7 @@
         border-radius: 50%;
         position: fixed;
         top: 1.5rem;
-        left: 67rem;
+        left: 61rem;
         // background-image: radial-gradient($color-grey-light-1, $color-grey-light-2);
         background-color: orangered;
         z-index: 1000;

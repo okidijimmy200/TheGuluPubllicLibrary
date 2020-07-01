@@ -1,16 +1,19 @@
 // definin the grid row
 .row {
     max-width: $grid-width;
-    // margin-left: 8rem;
     margin: 0 auto;
-    // display: inline-block;
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        @media only screen and (max-width:$bp-large) {
+            margin-bottom: $gutter-vertical-small;
+        }
     }
-     
-    @media only screen and (max-width:$bp-small) {
-        margin-bottom: $gutter-vertical-small;
+    @media only screen and (max-width:$bp-large) {
+        max-width: 105rem;
+        // making the padding on the row
+        padding: 0 3rem;
     }
+    
     // including clearfix to maintain the height property
     @include clearfix;
 
@@ -21,13 +24,13 @@
 
             // removing margin from columns
              
-        @media only screen and (max-width:$bp-small) {
+        @media only screen and (max-width:$bp-medium) {
             margin-right: 0;
             margin-bottom: $gutter-vertical-small;
         }
         }
 
-        @media only screen and (max-width:$bp-small) {
+        @media only screen and (max-width:$bp-medium) {
             width: 100% !important;
         }
 

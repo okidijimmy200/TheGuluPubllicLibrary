@@ -1,8 +1,8 @@
 .card {
     height: 52rem;
 
-    @media only screen and (max-width:$bp-small) {
-        height: 40rem;
+    @media only screen and (max-width:$bp-medium) {
+        height: 35rem;
     }
     
    
@@ -15,9 +15,9 @@
         -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         position: relative;
-        @media only screen and (max-width:$bp-small) {
+        @media only screen and (max-width:$bp-medium) {
             display: flex;
-            height: 40rem;
+            height: 35rem;
         }
         
     }
@@ -33,9 +33,9 @@
             height: 24rem;
             border: none;
 
-            @media only screen and (max-width:$bp-small) {
-               width: 30rem;
-               height: 30rem;
+            @media only screen and (max-width:$bp-medium) {
+               width: 35rem;
+               height: 35rem;
             }
         }
         &--2{
@@ -57,11 +57,17 @@
         left: 50%;
         transform:translate(-60%, -50%);
 
+        @media only screen and (max-width:$bp-medium) {
+            position: absolute;
+            top: 15rem;
+            left: 50%;
+            transform:translate(11%, -27%);
+        }
         @media only screen and (max-width:$bp-small) {
             position: absolute;
             top: 15rem;
             left: 50%;
-            transform:translate(-60%, -50%);
+            transform:translate(55%, 10%);
         }
 
     }

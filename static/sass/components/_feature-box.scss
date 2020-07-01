@@ -2,6 +2,14 @@
     font-size: 1.5rem;
     padding: 2.5rem;
     text-align: center;
+    
+    @media only screen and (max-width:$bp-medium) {
+        &:not(:last-child) {
+            border-bottom: 1px solid #ddd;
+        }
+        
+    
+}
 
     // styling the icon
     &__icon {

@@ -3,9 +3,10 @@
     padding: 4rem 0;
     font-size: 1.6rem;
 
-    @media only screen and (max-width:$bp-small) {
+    @media only screen and (max-width:$bp-medium) {
         font-size: 1.2rem;
     }
+    
 
     &__logo-box {
         text-align: center;
@@ -22,8 +23,9 @@
     &__navigation {
         border-top: .1rem solid $color-grey-light-2;
         padding-top: 1rem;
-        margin-left: 27rem;
-        display: inline-block;
+        display:table;
+        margin:0px auto 0px auto;
+       
     }
 
     &__list {
@@ -35,10 +37,10 @@
         display: inline-block;
         &:not(:last-child) {
             margin-right: 8.5rem;
-            
-        @media only screen and (max-width:$bp-small) {
-            margin-right: 11.3rem;
-        }
+            @media only screen and (max-width:47.5em) {
+                margin-right: 6rem;
+            }
+        
         }
 
     }
@@ -66,8 +68,12 @@
     &__copyright {
         width: 80%;
         text-align: center;
-        margin-left: 16rem;
+        // --centering content in the middle of div for row
+        display:table;
+        margin:0px auto 0px auto;
+        // margin-left: 16rem;
         margin-top: 5rem;
+
 
     }
 

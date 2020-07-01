@@ -23,13 +23,17 @@ body {
   color: #777;
   box-sizing: border-box;
   padding: 3rem; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (min-width: 68.75em) {
     body {
-      padding: 0; } }
+      padding: 3.5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0;
+      margin-right: 0; } }
 
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 56.25rem) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 55%; } }
 
@@ -47,7 +51,7 @@ html {
   font-size: 4rem;
   font-weight: 400;
   letter-spacing: .8rem; }
-  @media only screen and (max-width: 49.75rem) {
+  @media only screen and (max-width: 60em) {
     .heading-primary--main {
       font-size: 3rem;
       letter-spacing: .6rem; } }
@@ -63,7 +67,7 @@ html {
   -webkit-background-clip: text;
   color: transparent;
   transform: translate(0%, 0); }
-  @media only screen and (max-width: 49.75rem) {
+  @media only screen and (max-width: 60em) {
     .heading-primary--sub {
       font-size: 1.5rem;
       letter-spacing: 1.4rem; } }
@@ -181,9 +185,9 @@ html {
 
 .card {
   height: 52rem; }
-  @media only screen and (max-width: 41.876rem) {
+  @media only screen and (max-width: 56.25em) {
     .card {
-      height: 40rem; } }
+      height: 35rem; } }
   .card__side {
     background-color: #fff;
     height: 52rem;
@@ -192,10 +196,10 @@ html {
     -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     position: relative; }
-    @media only screen and (max-width: 41.876rem) {
+    @media only screen and (max-width: 56.25em) {
       .card__side {
         display: flex;
-        height: 40rem; } }
+        height: 35rem; } }
   .card__picture {
     background-size: cover;
     border-top-right-radius: 3px;
@@ -204,10 +208,10 @@ html {
       width: 36rem;
       height: 24rem;
       border: none; }
-      @media only screen and (max-width: 41.876rem) {
+      @media only screen and (max-width: 56.25em) {
         .card__picture--1 {
-          width: 30rem;
-          height: 30rem; } }
+          width: 35rem;
+          height: 35rem; } }
     .card__picture--2 {
       width: 18rem;
       height: 18rem;
@@ -220,12 +224,18 @@ html {
     position: absolute;
     left: 50%;
     transform: translate(-60%, -50%); }
-    @media only screen and (max-width: 41.876rem) {
+    @media only screen and (max-width: 56.25em) {
       .card__btn-view {
         position: absolute;
         top: 15rem;
         left: 50%;
-        transform: translate(-60%, -50%); } }
+        transform: translate(11%, -27%); } }
+    @media only screen and (max-width: 37.5em) {
+      .card__btn-view {
+        position: absolute;
+        top: 15rem;
+        left: 50%;
+        transform: translate(55%, 10%); } }
 
 .card2 {
   height: 38rem; }
@@ -245,10 +255,17 @@ html {
       width: 26rem;
       height: 20rem;
       border: none; }
+      @media only screen and (max-width: 56.25em) {
+        .card2__picture--2 {
+          width: 100%;
+          height: 25rem; } }
   .card2__text {
     padding: 2rem;
     font-size: 1.5rem;
     height: 12rem; }
+    @media only screen and (max-width: 56.25em) {
+      .card2__text {
+        height: 8rem; } }
   .card2__btn-view--1 {
     position: absolute;
     top: 58rem;
@@ -366,6 +383,9 @@ a, li {
   font-size: 1.5rem;
   padding: 2.5rem;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .specification-box:not(:last-child) {
+      border-bottom: 1px solid #ddd; } }
   .specification-box__icon {
     font-size: 3rem;
     margin-bottom: 5px; }
@@ -519,7 +539,7 @@ ul li:hover .dropOut {
   background-color: #333;
   padding: 4rem 0;
   font-size: 1.6rem; }
-  @media only screen and (max-width: 41.876rem) {
+  @media only screen and (max-width: 56.25em) {
     .footer {
       font-size: 1.2rem; } }
   .footer__logo-box {
@@ -531,17 +551,17 @@ ul li:hover .dropOut {
   .footer__navigation {
     border-top: 0.1rem solid #eee;
     padding-top: 1rem;
-    margin-left: 27rem;
-    display: inline-block; }
+    display: table;
+    margin: 0px auto 0px auto; }
   .footer__list {
     list-style: none; }
   .footer__item {
     display: inline-block; }
     .footer__item:not(:last-child) {
       margin-right: 8.5rem; }
-      @media only screen and (max-width: 41.876rem) {
+      @media only screen and (max-width: 47.5em) {
         .footer__item:not(:last-child) {
-          margin-right: 11.3rem; } }
+          margin-right: 6rem; } }
   .footer__link:link, .footer__link:visited {
     color: #f7f7f7;
     background-color: #333;
@@ -555,7 +575,8 @@ ul li:hover .dropOut {
   .footer__copyright {
     width: 80%;
     text-align: center;
-    margin-left: 16rem;
+    display: table;
+    margin: 0px auto 0px auto;
     margin-top: 5rem; }
 
 .row {
@@ -563,9 +584,13 @@ ul li:hover .dropOut {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-  @media only screen and (max-width: 41.876rem) {
+    @media only screen and (max-width: 68.75em) {
+      .row:not(:last-child) {
+        margin-bottom: 4rem; } }
+  @media only screen and (max-width: 68.75em) {
     .row {
-      margin-bottom: 6rem; } }
+      max-width: 105rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -573,26 +598,26 @@ ul li:hover .dropOut {
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
-      @media only screen and (max-width: 41.876rem) {
+      margin-right: 5rem; }
+      @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0;
-          margin-bottom: 6rem; } }
-    @media only screen and (max-width: 41.876rem) {
+          margin-bottom: 4rem; } }
+    @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
   .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); }
+    width: calc((100% - 5rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3); }
+    width: calc((100% - 2 * 5rem) / 3); }
   .row .col-2-of-3 {
-    width: calc(2* ((100% - 2 * 6rem) / 3 + 6rem)); }
+    width: calc(2* ((100% - 2 * 5rem) / 3 + 5rem)); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 6rem) / 4); }
+    width: calc((100% - 3 * 5rem) / 4); }
   .row .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+    width: calc(2 * ((100% - 3 * 5rem) / 4) + 5rem); }
   .row .col-3-of-4 {
-    width: calc(3 *((100% - 3 * 6rem) / 4) + 2*6rem); }
+    width: calc(3 *((100% - 3 * 5rem) / 4) + 2*5rem); }
 
 .section-primary {
   background-image: linear-gradient(to right bottom, rgba(119, 119, 119, 0.8), rgba(119, 119, 119, 0.8)), url(../images/lib.jpg);
@@ -625,11 +650,11 @@ ul li:hover .dropOut {
     float: right;
     margin-top: 3rem;
     /* to display content in block */ }
-    @media only screen and (max-width: 41.876rem) {
+    @media only screen and (max-width: 37.5em) {
       .header__logo--navbox {
         margin-top: -20rem;
         display: none; } }
-    @media only screen and (min-width: 41.876rem) {
+    @media only screen and (min-width: 37.5em) {
       .header__logo--navbox li {
         display: inline-block; } }
     .header__logo--navbox li:not(:last-child) {
@@ -656,11 +681,11 @@ ul li:hover .dropOut {
       padding: 1.8rem 2rem;
       position: relative; }
 
-@media only screen and (min-width: 41.876rem) {
+@media only screen and (min-width: 37.5em) {
   .navigation {
     display: none; } }
 
-@media only screen and (max-width: 41.876rem) {
+@media only screen and (max-width: 37.5em) {
   .navigation {
     height: 0; }
     .navigation__checkbox {
@@ -672,7 +697,7 @@ ul li:hover .dropOut {
       position: fixed;
       border-radius: 50%;
       top: 1.5rem;
-      left: 67rem;
+      left: 61rem;
       z-index: 2000;
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
       text-align: center;
@@ -683,7 +708,7 @@ ul li:hover .dropOut {
       border-radius: 50%;
       position: fixed;
       top: 1.5rem;
-      left: 67rem;
+      left: 61rem;
       background-color: orangered;
       z-index: 1000;
       transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
