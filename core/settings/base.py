@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(os.path.join(__file__, os.pardir))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -91,17 +91,6 @@ AUTHENTICATION_BACKENDS = (
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -140,15 +129,19 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 parent_dir = os.path.abspath(os.path.dirname(__file__))
 MEDIA_ROOT = os.path.join(parent_dir, 'media/')
 MEDIA_URL = '/media/'
 
 # making the static file global
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"), 
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"), 
+# ]
+
+# pdn
+STATICFILES_DIR = '/home/jimmy/static'
 
 
 '''ALL AUTH'''
